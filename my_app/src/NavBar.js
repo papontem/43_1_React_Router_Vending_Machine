@@ -11,11 +11,11 @@ function NavBar() {
       <NavLink exact to="/origami">
         Origami
       </NavLink>
-      <NavLink exact to="/eat">
-        Eat
-      </NavLink>
       <NavLink exact to="/drink">
         Drink
+      </NavLink>
+      <NavLink exact to="/pizza">
+        Pizza
       </NavLink>
     </nav>
   );

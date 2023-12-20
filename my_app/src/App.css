@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.HTML-Navbar{
+  border: solid black 2px;
+}
+.HTML-Navbar-ReactLink{
+  font-weight: bold;
+}
