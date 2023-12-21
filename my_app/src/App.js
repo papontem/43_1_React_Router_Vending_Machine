@@ -5,32 +5,36 @@ import Pizza from "./snacks/Pizza";
 import Drink from "./snacks/Drink";
 import NavBar from "./NavBar.js";
 
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  console.log("Current path:");
 	return (
 		<div className="App">
 			<BrowserRouter>
 				<NavBar />
-        <nav className="HTML-Navbar">
-          <Link to={"/"}>Home</Link>
-          <Link to={"/origami"}>Origami</Link>
-          <Link to={"/drink"}>Drink</Link>
-          <Link to={"/pizza"}>Pizza</Link>
-        </nav>
-				<Route exact path="/">
-					<Home />
-				</Route>
-				<Route exact path="/origami">
-					<Origami />
-				</Route>
-				<Route exact path="/drink">
-					<Drink />
-				</Route>
-				<Route exact path="/pizza">
-					<Pizza />
-				</Route>
+
+				<Routes>
+					<Route exact path="/" element=<Home /> />
+					<Route exact path="/origami" element=<Origami /> />
+					<Route exact path="/drink" element=<Drink /> />
+					<Route exact path="/pizza" element=<Pizza /> />
+				</Routes>
+
+				{/* React-Routes-DOM V5 Syntax not compatable with react v18*/}
+
+				{/* <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/origami">
+          <Origami />
+        </Route>
+        <Route exact path="/drink">
+          <Drink />
+        </Route>
+        <Route exact path="/pizza">
+          <Pizza />
+        </Route> */}
+				{/* React-Routes-DOM V6 Syntax */}
 			</BrowserRouter>
 		</div>
 	);
